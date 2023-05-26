@@ -1,0 +1,84 @@
+.nav-container {
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  padding: 10px;
+}
+
+.navbar {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  height: 15vh;
+  background-color: rgba(124, 128, 129, 0.045);
+}
+.navbar-logo-container {
+  width: 100px;
+  height: 100px;
+}
+.navbar-logo {
+  justify-self: start;
+  margin-left: 10px;
+  margin-top: 1vh;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+  animation: slideInLogo 1s forwards;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+@keyframes slideInLogo {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.bicycle-icon {
+  margin-right: 10px;
+}
+
+.navbar-links {
+  font-size: 30px;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.navbar-links li {
+  margin-right: 80px; /*medida espacio links */
+}
+
+.navbar-links li:last-child {
+  margin-right: 0; /* Quitamos el margen derecho del último elemento para evitar un espacio extra */
+}
+
+.navbar-links a {
+  display: inline-block;
+  display: flex;
+  margin-top: 0.9rem;
+  justify-content: center;
+  text-decoration: none !important;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  border-bottom: 1px solid transparent;
+}
+.navbar-links a:hover {
+  border-bottom: 1px solid #514c4c;
+}
+
+.navbar-cart {
+  font-size: 20px;
+  margin-right: 10px;
+  margin-top: 1vh;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}

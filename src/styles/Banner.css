@@ -1,0 +1,45 @@
+.banner {
+  position: relative;
+  background-image: url("../assets/DH.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  margin: 0.5rem;
+}
+
+.banner-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 3% 0;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 36px;
+  margin-top: 10px;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: 0.7;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  margin-top: 20px; /* Ajustado */
+}
+
+.banner h1,
+.banner p {
+  font-family: "Arial", sans-serif; /* Ajusta la fuente según tus preferencias */
+}

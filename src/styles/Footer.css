@@ -1,0 +1,31 @@
+.footer-container {
+  background-color: rgba(124, 128, 129, 0.045);
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem;
+  margin: 0.5rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #333333;
+}
+
+.footer-info {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666666;
+}
