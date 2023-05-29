@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "name": "Bicicleta de montaña",
+      "image": "../assets/bike1.jpg",
+      "price": 1.500
+    },
+    {
+      "id": 2,
+      "name": "Bicicleta de enduro",
+      "image": "../assets/bike2.jpg",
+      "price": 2.000
+    },
+    {
+      "id": 3,
+      "name": "Casco",
+      "image": "../assets/casco.jpg",
+      "price": 80
+    },
+    {
+      "id": 4,
+      "name": "Guantes de ciclismo",
+      "image": "../assets/guantes.jpg",
+      "price": 20
+    },
+    {
+      "id": 5,
+      "name": "Zapatillas de ciclismo",
+      "image": "../assets/zapas.jpg",
+      "price": 120
+    }
+  ]
+  

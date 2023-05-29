@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { faBicycle } from "@fortawesome/free-solid-svg-icons";
 import "../styles/Navbar.css";
+import {Link} from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -29,8 +30,10 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="navbar-cart">
+          <Link className="navbar-link" to="/cart" >
           <FontAwesomeIcon icon={faShoppingCart} className="navbar-icon" />
           <span>Shopping Cart</span>
+          </Link>
         </div>
       </nav>
     </div>
