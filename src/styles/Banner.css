@@ -1,6 +1,6 @@
 .banner {
   position: relative;
-  background-image: url("../assets/DH.jpg");
+  background-image: url("../assets/img/DH.jpg");
   background-size: cover;
   background-position: center;
   height: 60vh;
@@ -41,5 +41,5 @@
 
 .banner h1,
 .banner p {
-  font-family: "Arial", sans-serif; /* Ajusta la fuente según tus preferencias */
+  font-family: "Arial", sans-serif; 
 }

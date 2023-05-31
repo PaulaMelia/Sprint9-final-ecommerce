@@ -3,18 +3,20 @@
   z-index: 3;
   top: 0;
   padding: 10px;
+  background-color: white;
 }
 
 .navbar {
   height: 10vh;
   display: flex;
   justify-content: space-between;
-  height: 15vh;
+  align-items: center;
   background-color: rgba(124, 128, 129, 0.045);
 }
 .navbar-logo-container {
   width: 100px;
   height: 100px;
+  display: flex;
 }
 .navbar-logo {
   justify-self: start;

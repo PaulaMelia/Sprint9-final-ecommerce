@@ -1,33 +1,34 @@
+
+
 [
     {
       "id": 1,
-      "name": "Bicicleta de montaña",
-      "image": "../assets/bike1.jpg",
-      "price": 1.500
+      "name": "All mountain Canyon",
+      "image": "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dwdfc9c640/images/full/full_2023_/2023/full_2023_3165_neuron-5_rd_P5.jpg?sw=874&sfrm=png&q=90&bgcolor=F2F2F2",
+      "price": 1500,
+      "characteristics":"Peso: 15.10 kg-Experimenta el máximo rendimiento en terrenos exigentes con la bicicleta de enduro. Diseñada para superar obstáculos y descensos técnicos, esta bicicleta ofrece una suspensión óptima y una geometría agresiva para una conducción ágil y emocionante."
     },
     {
       "id": 2,
-      "name": "Bicicleta de enduro",
-      "image": "../assets/bike2.jpg",
-      "price": 2.000
+      "name": "Enduro Canyon",
+      "image": "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw4bbb2561/images/full/full_2023_/2023/full_2023_3814_spectral-5-29_ye-ye_P5.jpg?sw=874&sfrm=png&q=90&bgcolor=F2F2F2",
+      "price": 2000,
+      "characteristics":"Peso: 15.32 kg-Desde sesiones en tus senderos locales hasta largos fines de semana en las montañas o en el bikepark, la Spectral 6 puede con todo gracias a sus resistentes componentes y a su progresiva y divertida geometría."
     },
     {
       "id": 3,
-      "name": "Casco",
-      "image": "../assets/casco.jpg",
-      "price": 80
+      "name": "Casco Giro",
+      "image": "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw34ddb190/images/full/9101162-Gi/2020/9101162-Giro-Switchblade-MIPS-Dowhnhill-Enduro-Helm-bk-full.jpg?sw=874&sfrm=png&q=90&bgcolor=F2F2F2",
+      "price": 80,
+      "characteristics":"El GIRO Switchblade Mips es un casco increíblemente versátil con una correa de barbilla extraíble. Adecuado para disciplinas más complejas y en particular para competiciones de DH"
     },
     {
       "id": 4,
-      "name": "Guantes de ciclismo",
-      "image": "../assets/guantes.jpg",
-      "price": 20
-    },
-    {
-      "id": 5,
-      "name": "Zapatillas de ciclismo",
-      "image": "../assets/zapas.jpg",
-      "price": 120
+      "name": "Guantes MTB",
+      "image": "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw3d8e1858/images/full/9101384_10/2021/9101384_100_Ridecamp_Youth_Gloves_full.jpg?sw=874&sfrm=png&q=90&bgcolor=F2F2F2",
+      "price": 20,
+      "characteristics":"Dorso de la mano en nilón/spandex que proporciona confort y flexibilidad,en todas las tallas"
     }
+    
   ]
   
