@@ -1,0 +1,155 @@
+/* Estilos para tabletas */
+@media screen and (min-width: 768px) and (max-width: 1023px)  {
+  /* Navbar*/
+  .navbar {
+    flex-direction: column;
+    align-items: center; 
+    height: auto;
+    padding: 10px; 
+  }
+
+  .navbar-logo-container {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px; 
+    
+  }
+
+  .navbar-logo {
+    justify-self: center; 
+    margin-left: 0; 
+    margin-top: 0; 
+    font-size: 20px; 
+    animation: none; 
+    transform: none; 
+    opacity: 1; 
+  }
+
+  .navbar-links {
+    font-size: 16px; 
+    justify-content: center; 
+    margin-top: 10px; 
+  }
+
+  .navbar-links li {
+    margin-right: 20; 
+    margin-bottom: 10px; 
+  }
+
+  .navbar-links a {
+    margin-top: 0;
+    font-size: 16px; 
+  }
+
+  .navbar-cart {
+    margin-right: 0;
+    margin-top: 10px; 
+  }
+
+  /* Banner */
+
+  .banner h1 {
+    font-size: 36px;
+  }
+
+  .banner p {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  /* Footer */
+
+  .footer-links {
+    flex-direction: column;
+  }
+
+  .footer-links a {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 767px) {
+  /* Navbar*/
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .navbar-logo-container {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .navbar-logo {
+    justify-self: center;
+    margin-left: 0;
+    margin-top: 0;
+    font-size: 20px;
+    animation: none;
+    transform: none;
+    opacity: 1;
+  }
+
+  .navbar-links {
+    font-size: 16px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .navbar-links li {
+    margin-right: 20;
+    margin-bottom: 10px;
+  }
+
+  .navbar-links a {
+    margin-top: 0;
+    font-size: 16px;
+  }
+
+  .navbar-cart {
+    margin-right: 0;
+    margin-top: 10px;
+  }
+  /* Banner */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-logo-container {
+    margin-bottom: 1rem;
+  }
+
+  .navbar-links {
+    margin-top: 1rem;
+  }
+
+  .navbar-links li {
+    margin-bottom: 1rem;
+  }
+
+  /*Products*/
+  .products-card-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .product-card {
+    flex-basis: 100%;
+  }
+
+  /* Footer */
+
+  .footer-links {
+    flex-direction: column;
+  }
+
+  .footer-links a {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
