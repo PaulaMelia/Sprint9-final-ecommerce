@@ -1,7 +1,6 @@
 ### Sprint Final Ecommerce
 ##
 - Crear por lo menos 5 componentes.
-- Usar input y output para pasar datos entre componentes.
 - Usar las rutas.
 - Utilizar Redux o Contexto.
 - Llamar mínimo a una API externa.
