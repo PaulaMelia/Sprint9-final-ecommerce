@@ -1,19 +1,37 @@
-import { useContext } from "react";
+import  { useContext, useState } from "react";
 import { dataContext } from "../DataContext";
-import'../../styles/CartContent.css';
+import "../../styles/CartContent.css";
 
 const CartElements = () => {
   const { cart } = useContext(dataContext);
-  return cart.map((product) => {
-    return (
-      <div className="cartContent" key={product.id}>
-        <img src={product.image} alt="product-card" />
-        <h3 className="name">{product.name}</h3>
-        <h4 className="price">{product.price}$</h4>
-        <p className="characteristics">{product.characteristics}</p>
+  const [purchased, setPurchased] = useState(false);
+
+  const handlePurchase = () => {
+    setPurchased(true);
+  };
+
+  return (
+    <div className="cartContainer">
+      <div className="cartHeader">Aquí tienes tu compra:</div>
+      {purchased && <div className="purchasedMessage">¡Comprado!</div>}
+      <div className="cartContentContainer">
+        {cart.map((product) => (
+          <div className="cartContent" key={product.id}>
+            <img src={product.image} alt="product-card" />
+            <div className="productInfo">
+              <h3 className="name">{product.name}</h3>
+              <h4 className="price">{product.price}$</h4>
+              <p className="characteristics">{product.characteristics}</p>
+            </div>
+          </div>
+        ))}
       </div>
-    );
-  });
+      <button className="purchaseButton" onClick={handlePurchase}>
+        Comprar
+      </button>
+    </div>
+  );
 };
 
 export default CartElements;
+

@@ -1,0 +1,91 @@
+.cartContainer {
+    margin: 60px;
+    border: 4px solid #ddd;
+   
+  }
+  
+  .cartHeader {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .cartContentContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  
+  .cartContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    width: 200px;
+  }
+  
+  .cartContent img {
+    height: 150px;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+  
+  .cartContent .productInfo {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .cartContent .name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .cartContent .price {
+    font-size: 14px;
+    color: #0066c0;
+    font-weight: bold;
+  }
+  
+  .cartContent .characteristics {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    margin-top: 5px;
+  }
+  .purchaseButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .purchaseButton:hover {
+    background-color: darkblue;
+  }
+  .purchasedMessage {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    color: green;
+  }
+  
+  
+  

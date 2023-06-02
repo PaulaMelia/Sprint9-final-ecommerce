@@ -1,12 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { dataContext } from "./DataContext";
 import "../styles/Products.css";
 
 const ProductsComponent = () => {
   const { data, cart, setCart } = useContext(dataContext);
+  const [addedToCart, setAddedToCart] = useState({});
 
   const buyProducts = (product) => {
-    setCart([...cart, product]); /*copia de mi carrito y agrega product nuevo*/
+    setCart([...cart, product]);
+    setAddedToCart({ [product.id]: true });
   };
 
   return (
@@ -22,7 +24,15 @@ const ProductsComponent = () => {
             <h3 className="product-title">{product.name}</h3>
             <h4 className="product-price">{product.price}$</h4>
             <p className="product-characteristics">{product.characteristics}</p>
-            <button onClick={() => buyProducts(product)}>Buy</button>
+            <button
+              onClick={() => buyProducts(product)}
+              className="button-primary"
+            >
+              Buy
+            </button>
+            {addedToCart[product.id] && (
+              <div className="addedToCartMessage">Producto añadido a la cesta</div>
+            )}
           </div>
         ))}
     </div>

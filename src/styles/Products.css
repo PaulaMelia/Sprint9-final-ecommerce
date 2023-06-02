@@ -46,12 +46,23 @@
 .button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
   border: none;
   cursor: pointer;
 }
 
-.button:hover {
-  background-color: #0056b3;
+.button-primary {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.addedToCartMessage {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  color: green;
 }
