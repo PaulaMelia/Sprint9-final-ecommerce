@@ -1,12 +1,9 @@
 
 import Home from "./components/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CartContent from "./components/CartContent";
+import CartContent from "./components/Cart/CartContent";
 import DataProvider from "./components/DataContext";
 import ProductsPage from "./components/ProductsPage";
-
-
-
 
 function App() {
   return (

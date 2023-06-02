@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect } from "react";
-import PropTypes from "prop-types"; /*validación para la prop children  */
-//import axios from "axios"; /*para hacer peticiones http, como fetch*/
+import PropTypes from "prop-types"; /*validación para la prop children */
+
 
 
 export const dataContext = createContext();
@@ -8,6 +8,7 @@ export const dataContext = createContext();
 
 const DataProvider = ({ children }) => {
   const [data, setData] = useState([]);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     fetch("/data/data.json")
@@ -16,7 +17,7 @@ const DataProvider = ({ children }) => {
   }, []);
 
   return (
-    <dataContext.Provider value={{ data }}>{children}</dataContext.Provider>
+    <dataContext.Provider value={{ data, cart, setCart}}>{children}</dataContext.Provider>
   );
 };
 

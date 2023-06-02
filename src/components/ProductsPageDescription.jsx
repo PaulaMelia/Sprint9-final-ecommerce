@@ -14,5 +14,5 @@ const ProductsPageDescription = () => {
     )
   }
   
-  export default ProductsPageDescription
+  export default ProductsPageDescription;
   
