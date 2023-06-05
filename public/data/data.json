@@ -6,28 +6,32 @@
       "name": "All mountain Canyon",
       "image": "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dwdfc9c640/images/full/full_2023_/2023/full_2023_3165_neuron-5_rd_P5.jpg?sw=874&sfrm=png&q=90&bgcolor=F2F2F2",
       "price": 1500,
-      "characteristics":"Peso: 15.10 kg-Experimenta el máximo rendimiento en terrenos exigentes con la bicicleta de enduro. Diseñada para superar obstáculos y descensos técnicos, esta bicicleta ofrece una suspensión óptima y una geometría agresiva para una conducción ágil y emocionante."
+      "characteristics":"Peso: 15.10 kg-Experimenta el máximo rendimiento en terrenos exigentes con la bicicleta de enduro. Diseñada para superar obstáculos y descensos técnicos, esta bicicleta ofrece una suspensión óptima y una geometría agresiva para una conducción ágil y emocionante.",
+      "quanty": 1
     },
     {
       "id": 2,
       "name": "Enduro Canyon",
       "image": "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw4bbb2561/images/full/full_2023_/2023/full_2023_3814_spectral-5-29_ye-ye_P5.jpg?sw=874&sfrm=png&q=90&bgcolor=F2F2F2",
       "price": 2000,
-      "characteristics":"Peso: 15.32 kg-Desde sesiones en tus senderos locales hasta largos fines de semana en las montañas o en el bikepark, la Spectral 6 puede con todo gracias a sus resistentes componentes y a su progresiva y divertida geometría."
+      "characteristics":"Peso: 15.32 kg-Desde sesiones en tus senderos locales hasta largos fines de semana en las montañas o en el bikepark, la Spectral 6 puede con todo gracias a sus resistentes componentes y a su progresiva y divertida geometría.",
+      "quanty": 1
     },
     {
       "id": 3,
       "name": "Casco Giro",
       "image": "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw34ddb190/images/full/9101162-Gi/2020/9101162-Giro-Switchblade-MIPS-Dowhnhill-Enduro-Helm-bk-full.jpg?sw=874&sfrm=png&q=90&bgcolor=F2F2F2",
       "price": 80,
-      "characteristics":"El GIRO Switchblade Mips es un casco increíblemente versátil con una correa de barbilla extraíble. Adecuado para disciplinas más complejas y en particular para competiciones de DH"
+      "characteristics":"El GIRO Switchblade Mips es un casco increíblemente versátil con una correa de barbilla extraíble. Adecuado para disciplinas más complejas y en particular para competiciones de DH",
+      "quanty": 1
     },
     {
       "id": 4,
       "name": "Guantes MTB",
       "image": "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw3d8e1858/images/full/9101384_10/2021/9101384_100_Ridecamp_Youth_Gloves_full.jpg?sw=874&sfrm=png&q=90&bgcolor=F2F2F2",
       "price": 20,
-      "characteristics":"Dorso de la mano en nilón/spandex que proporciona confort y flexibilidad,en todas las tallas"
+      "characteristics":"Dorso de la mano en nilón/spandex que proporciona confort y flexibilidad,en todas las tallas",
+      "quanty": 1
     }
     
   ]
