@@ -1,7 +1,6 @@
-import  { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { dataContext } from "../DataContext";
 import CartItemCounter from "./CartItemCounter";
-
 
 const CartElements = () => {
   const { cart } = useContext(dataContext);
@@ -21,9 +20,9 @@ const CartElements = () => {
             <img src={product.image} alt="product-card" />
             <div className="productInfo">
               <h3 className="name">{product.name}</h3>
-              <h4 className="price">{product.price}$</h4>
+              <h4 className="price">{product.price * product.quanty}$</h4>
               <p className="characteristics">{product.characteristics}</p>
-              <CartItemCounter product={product} quanty={product.quanty}/>
+              <CartItemCounter product={product} quanty={product.quanty} />
             </div>
           </div>
         ))}
@@ -36,4 +35,3 @@ const CartElements = () => {
 };
 
 export default CartElements;
-
