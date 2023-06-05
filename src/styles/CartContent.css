@@ -107,5 +107,34 @@
   text-align: center;
   margin-top: 10px;
 }
+.cart-item-counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 5px;
+}
+
+.counter-button {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+.counter-button:hover {
+  background-color: #ddd;
+}
+
 
 
