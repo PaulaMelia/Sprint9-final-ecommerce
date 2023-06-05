@@ -1,3 +1,6 @@
+import PropTypes from "prop-types";
+
+
 const CartItemCounter = ({quanty}) => {
   return (
     <>
@@ -7,5 +10,8 @@ const CartItemCounter = ({quanty}) => {
     </>
   );
 };
+CartItemCounter.propTypes = {
+    quanty: PropTypes.number.isRequired,
+  };
 
 export default CartItemCounter;
