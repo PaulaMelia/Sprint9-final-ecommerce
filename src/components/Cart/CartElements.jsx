@@ -23,7 +23,7 @@ const CartElements = () => {
               <h3 className="name">{product.name}</h3>
               <h4 className="price">{product.price}$</h4>
               <p className="characteristics">{product.characteristics}</p>
-              <CartItemCounter quanty={product.quanty}/>
+              <CartItemCounter product={product} quanty={product.quanty}/>
             </div>
           </div>
         ))}
