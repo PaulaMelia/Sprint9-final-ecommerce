@@ -3,6 +3,7 @@ import Banner from "./Banner";
 import Footer from "./Footer";
 import ProductsComponent from "./ProductsComponent";
 
+
 const Home = () => {
   return (
     <div>

@@ -1,0 +1,33 @@
+.container {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .paragraph {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  li {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .email {
+    color: blue;
+    cursor: pointer;
+  }
+  
