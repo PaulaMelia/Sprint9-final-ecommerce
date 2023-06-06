@@ -3,6 +3,7 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { faBicycle } from "@fortawesome/free-solid-svg-icons";
 import "../styles/Navbar.css";
 import { Link } from "react-router-dom";
+import TotalItems from "./Cart/TotalItems";
 
 const Navbar = () => {
   return (
@@ -28,10 +29,11 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="navbar-cart">
-          <Link className="navbar-link" to="/cart">
-            <FontAwesomeIcon icon={faShoppingCart} className="navbar-icon" />
-            <span>Shopping Cart</span>
+          <Link className="navbar-link" to={"/cart"}>
+            🛒
+          <TotalItems/>
           </Link>
+          
         </div>
       </nav>
     </div>
