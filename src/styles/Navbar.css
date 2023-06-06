@@ -55,7 +55,7 @@
 }
 
 .navbar-links li {
-  margin-right: 80px; /*medida espacio links */
+  margin-right: 80px; 
 }
 
 .navbar-links li:last-child {
