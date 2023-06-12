@@ -111,6 +111,17 @@
     margin-right: 20;
     margin-bottom: 10px;
   }
+  .navbar-links li.navbar-contact {
+    margin-bottom: 10px;
+  }
+
+  .navbar-links li.navbar-contact a {
+    font-size: 16px;
+    margin-top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
   .navbar-links a {
     margin-top: 0;
