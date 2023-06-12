@@ -1,3 +1,10 @@
+/*Tailwind*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
 /* Estilos para tabletas */
 @media screen and (min-width: 768px) and (max-width: 1023px)  {
   /* Navbar*/
@@ -153,3 +160,5 @@
     margin-bottom: 1rem;
   }
 }
+
+
