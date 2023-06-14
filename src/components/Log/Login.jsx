@@ -1,42 +1,49 @@
-import { Route, Routes, useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { signInWithEmailAndPassword, fetchSignInMethodsForEmail } from "firebase/auth";
-import { auth } from "../../Firebase";
-import Register from "./Register";
-import Navbar from "../Navbar";
+import { useContext, useEffect, useState } from "react";
+import { useNavigate, Route, Routes } from "react-router-dom";
 import "../../styles/Login.css";
-
+import Navbar from "../Navbar";
+import Register from "./Register";
+import { AuthContext } from "./context/AuthContext";
 
 function LoginForm() {
+  const { currentUser, setCurrentUser } = useContext(AuthContext);
+  const navigate = useNavigate();
   const [user, setUser] = useState({
-    email: "",
-    password: ""
+    username: undefined,
+    password: undefined,
   });
 
-  const navigate = useNavigate();
+  useEffect(() => {
+    if (currentUser) navigate("/");
+  }, [currentUser]);
 
-  const handleInputChange = (event) => {
+  const handleInputChange = (e) => {
     setUser({
       ...user,
-      [event.target.name]: event.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     try {
-      const signInMethods = await fetchSignInMethodsForEmail(auth, user.email);
+      const response = await fetch("https://dummyjson.com/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username: user.username,
+          password: user.password,
+          // expiresInMins: 60, // optional
+        }),
+      });
 
-      if (signInMethods.includes("password")) {
-        await signInWithEmailAndPassword(auth, user.email, user.password);
-        navigate("/dashboard");
+      if (response.status === 400) {
+        window.alert("error autentificacion");
       } else {
-        console.log("El usuario no está registrado");
-        // Manejar el caso en el que el usuario no está registrado
+        setCurrentUser(response);
       }
     } catch (error) {
-      console.log("Error al iniciar sesión:", error.message);
+      console.error(error);
     }
   };
 
@@ -44,11 +51,11 @@ function LoginForm() {
     <div className="login-form-container">
       <form onSubmit={handleSubmit}>
         <input
-          type="email"
-          name="email"
-          id="email"
-          value={user.email}
-          onChange={handleInputChange}
+          type="text"
+          name="username"
+          id="username"
+          value={user.username}
+          onChange={(e) => handleInputChange(e)}
           placeholder="Correo electrónico"
           className="login-input"
         />
@@ -57,11 +64,13 @@ function LoginForm() {
           name="password"
           id="password"
           value={user.password}
-          onChange={handleInputChange}
+          onChange={(e) => handleInputChange(e)}
           placeholder="Contraseña"
           className="login-input"
         />
-       <button type="submit" className="login-button">Iniciar sesión</button>
+        <button type="submit" className="login-button">
+          Iniciar sesión
+        </button>
       </form>
     </div>
   );

@@ -5,20 +5,30 @@ import DataProvider from "../components/DataContext";
 import ProductsPage from "../components/ProductsPage";
 import Contact from "../components/Contact";
 import LoginRoutes from "../components/Log/Login";
+import { AuthProvider } from "../components/Log/context/AuthContext";
 
 function RoutesConfig() {
   return (
-    <DataProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/products" element={<ProductsPage />}></Route>
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<div className="bg-slate-300 h-screen text-white flex"><LoginRoutes/></div>} />
-          <Route path="/cart" element={<CartContent />}></Route>
-        </Routes>
-      </BrowserRouter>
-    </DataProvider>
+    <AuthProvider>
+      <DataProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/products" element={<ProductsPage />}></Route>
+            <Route path="/contact" element={<Contact />} />
+            <Route
+              path="/login"
+              element={
+                <div className="bg-slate-300 h-screen text-white flex">
+                  <LoginRoutes />
+                </div>
+              }
+            />
+            <Route path="/cart" element={<CartContent />}></Route>
+          </Routes>
+        </BrowserRouter>
+      </DataProvider>
+    </AuthProvider>
   );
 }
 
