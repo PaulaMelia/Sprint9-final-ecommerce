@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { useNavigate, Route, Routes } from "react-router-dom";
+import { useNavigate, Link, Route, Routes } from "react-router-dom";
 import "../../styles/Login.css";
 import Navbar from "../Navbar";
 import Register from "./Register";
@@ -72,21 +72,26 @@ function LoginForm() {
           Iniciar sesión
         </button>
       </form>
+      <p>
+        No tienes una cuenta? <Link to="/register">Regístrate aquí</Link>
+      </p>
     </div>
   );
 }
 
 function LoginRoutes() {
   return (
-    <div className="login-page-container">
+    <>
       <Navbar />
-      <div className="login-content-container">
-        <Routes>
-          <Route path="/" element={<LoginForm />} />
-          <Route path="/register" element={<Register />} />
-        </Routes>
+      <div className="login-page-container">
+        <div className="login-content-container">
+          <Routes>
+            <Route path="/" element={<LoginForm />} />
+            <Route path="/register" element={<Register />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

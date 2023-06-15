@@ -6,6 +6,8 @@ import ProductsPage from "../components/ProductsPage";
 import Contact from "../components/Contact";
 import LoginRoutes from "../components/Log/Login";
 import { AuthProvider } from "../components/Log/context/AuthContext";
+import Register from "../components/Log/Register";
+/*import PrivateRoute from "./PrivateRoute";*/
 
 function RoutesConfig() {
   return (
@@ -13,18 +15,12 @@ function RoutesConfig() {
       <DataProvider>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/products" element={<ProductsPage />}></Route>
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<ProductsPage />} />
             <Route path="/contact" element={<Contact />} />
-            <Route
-              path="/login"
-              element={
-                <div className="bg-slate-300 h-screen text-white flex">
-                  <LoginRoutes />
-                </div>
-              }
-            />
-            <Route path="/cart" element={<CartContent />}></Route>
+            <Route path="/login" element={<LoginRoutes />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/cart" element={<CartContent />} />
           </Routes>
         </BrowserRouter>
       </DataProvider>

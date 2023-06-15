@@ -1,58 +1,87 @@
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../Firebase";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { AuthContext } from "./context/AuthContext";
+import Navbar from "../Navbar";
+import "../../styles/Register.css";
 
-const Register = () => {
+function RegisterForm() {
+  const { setCurrentUser } = useContext(AuthContext);
+  const navigate = useNavigate();
   const [user, setUser] = useState({
-    email: "",
+    username: "",
     password: "",
   });
 
-  const navigate = useNavigate();
-
-  const handleInputChange = (event) => {
+  const handleInputChange = (e) => {
     setUser({
       ...user,
-      [event.target.name]: event.target.value,
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     try {
-      await createUserWithEmailAndPassword(auth, user.email, user.password);
-      navigate("/dashboard");
+      // Send a request to your registration API endpoint
+      const response = await fetch("https://dummyjson.com/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username: user.username,
+          password: user.password,
+        }),
+      });
+
+      if (response.status === 400) {
+        window.alert("Error de registro");
+      } else {
+        setCurrentUser(response);
+        navigate("/");
+      }
     } catch (error) {
-      console.log("Error al registrar usuario:", error.message);
+      console.error(error);
     }
   };
 
   return (
+    <>
+      <Navbar />
+      <div className="register-form-container">
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            value={user.username}
+            onChange={handleInputChange}
+            placeholder="Correo electrónico"
+            className="register-input"
+          />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            value={user.password}
+            onChange={handleInputChange}
+            placeholder="Contraseña"
+            className="register-input"
+          />
+          <button type="submit" className="register-button">
+            Registrarse
+          </button>
+        </form>
+      </div>
+    </>
+  );
+}
+
+function Register() {
+  return (
     <div>
-      <h2>Registro</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          value={user.email}
-          onChange={handleInputChange}
-          placeholder="Correo electrónico"
-        />
-        <input
-          type="password"
-          name="password"
-          id="password"
-          value={user.password}
-          onChange={handleInputChange}
-          placeholder="Contraseña"
-        />
-        <button type="submit">Registrarse</button>
-      </form>
+      <h2>Registrarse</h2>
+      <RegisterForm />
     </div>
   );
-};
+}
 
 export default Register;
